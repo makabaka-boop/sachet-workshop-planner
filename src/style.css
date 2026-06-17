@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-warm-brown: #8B6F47;
+  --color-dark-brown: #5C4033;
+  --color-cream: #FDF8F0;
+  --color-vermillion: #C75450;
+  --color-jade: #5B8C5A;
+  --color-light-brown: #D4C4A8;
+  --color-pale-cream: #FAF3E8;
+  --color-medium-brown: #A68B5B;
+
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-cream);
+  color: var(--color-dark-brown);
+}
+
+.font-serif-cn {
+  font-family: 'Noto Serif SC', serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg text-white font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98];
+    background-color: var(--color-warm-brown);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-dark-brown);
+  }
+
+  .btn-outline {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 border-2 hover:shadow-sm active:scale-[0.98];
+    color: var(--color-warm-brown);
+    border-color: var(--color-warm-brown);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background-color: var(--color-pale-cream);
+  }
+
+  .btn-ghost {
+    @apply px-3 py-1.5 rounded-lg font-medium transition-all duration-200 hover:bg-white/60 active:scale-[0.98];
+    color: var(--color-dark-brown);
+  }
+
+  .card {
+    @apply rounded-xl shadow-sm border transition-all duration-200;
+    background-color: white;
+    border-color: var(--color-light-brown);
+  }
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(139, 111, 71, 0.1);
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .status-pending {
+    @apply status-badge;
+    background-color: #FEF3C7;
+    color: #92400E;
+  }
+  .status-ready {
+    @apply status-badge;
+    background-color: #D1FAE5;
+    color: #065F46;
+  }
+  .status-shortage {
+    @apply status-badge;
+    background-color: #FEE2E2;
+    color: #991B1B;
+  }
+  .status-demo {
+    @apply status-badge;
+    background-color: #E0E7FF;
+    color: #3730A3;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border px-3 py-2 text-sm transition-colors duration-200 outline-none;
+    border-color: var(--color-light-brown);
+    background-color: white;
+  }
+  .input-field:focus {
+    border-color: var(--color-warm-brown);
+    box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  }
+
+  .select-field {
+    @apply input-field appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%238B6F47' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-brown);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-medium-brown);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}

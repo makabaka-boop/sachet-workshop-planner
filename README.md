@@ -1,2 +1,5 @@
-# sachet-workshop-planner
-基于 Vue3 的香囊手作活动配料清单与分组管理页，支持材料包登记、状态批量调整、多条件筛选、异常检查与本地保存，帮助组织者在活动开场前快速核对物料、责任人与小组准备情况。
+# Vue 3 + TypeScript + Vite
+
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
