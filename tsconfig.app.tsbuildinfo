@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/composables/usesachetstore.ts","./src/types/index.ts","./src/app.vue","./src/components/groupchecklist.vue","./src/components/sachetform.vue","./src/components/sachetlist.vue","./src/components/warningpanel.vue"],"version":"5.6.3"}
